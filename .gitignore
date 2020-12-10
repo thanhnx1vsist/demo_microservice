@@ -1,3 +1,6 @@
 /order/node_modules
 /book/node_modules
 /customer/node_modules
+/apigateway/node_modules
+
+node_modules

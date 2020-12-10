@@ -20,7 +20,7 @@ mongoose.connect(db, {
 app.use(bodyParser.json());
 app.use('/order', Service);
 
-app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`) });
+app.listen(PORT, () => { console.log(`Server Order is running on port ${PORT}`) });
 
 
 

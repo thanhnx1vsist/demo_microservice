@@ -2,13 +2,23 @@ const Book = require('./bookModel');
 const express = require('express');
 const router = express.Router();
 
+
+router.get('/', async (req, res) => {
+    // try {
+    let book = await Book.find().select('title author price');
+    res.status(200).json(book);
+    // } catch (error) {
+    //     res.status(400).json(error)
+    // }
+
+});
 router.get('/:id', async (req, res) => {
-    try {
-        let book = await Book.findOne({ _id: req.params.id }).select('title author price');
-        res.status(200).json(book);
-    } catch (error) {
-        res.status(400).json(error)
-    }
+    // try {
+    let book = await Book.findOne({ _id: req.params.id }).select('title author price');
+    res.status(200).json(book);
+    // } catch (error) {
+    //     res.status(400).json(error)
+    // }
 
 });
 
